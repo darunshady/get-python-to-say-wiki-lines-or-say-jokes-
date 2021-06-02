@@ -1,0 +1,18 @@
+import pywhatkit   # u should install these (pywhatkit,wikipedia and pyjokes)from google and open terminal in the app u use to code python and type'pip install pywhatkit'
+import wikipedia     u should do the same for 'wikipedia and pyjokes'(ie 'pip install wikipedia'and 'pip install pyjokes')
+import pyjokes
+
+def y():                                     # create a def function and name it 
+    x = input("enter what u want to do")     # get the user to input what they wanna do
+    if 'google' in x:                        # if they want to google they should type 'google'and the stuff they want to google   example:google python
+        google=x.replace('google','')        # u have to replace 'google' or else its gonna search 'google python'
+        pywhatkit.search(google)             #'pywhatkit.search' is reserved function which comes with the pywhatkit package after u have typed'pywhatkit.search'
+    if 'wiki'in x:                             call the variable 'google'  
+        wiki = x.replace('wiki','')
+        info=wikipedia.summary(wiki,2)       #'wikipedia.summary' is reserved function which comes with the wikipedia package after u have typed'wikipedia.summary'
+        print(info)                            call the variavle 'wiki'and the number indicates how many lines of info u want
+    if 'jokes'in x:
+        jokes=pyjokes.get_joke()
+        print(jokes)
+
+y()
